@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Test class for RulesEngine functionality
- * @author aws
+ * @author Aws Ali
  * @version 1.0
  */
 public class RulesEngineTest {

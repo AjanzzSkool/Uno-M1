@@ -1,6 +1,6 @@
 /**
  * Represents a colours in the Uno game.
- * @author Ajan
+ * @author Ajan Balaganesh
  * @version 1.0
  */
 

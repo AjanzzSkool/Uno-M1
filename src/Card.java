@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * Represents a single Uno card with a color and rank.
- * @author Ajan
+ * @author Ajan Balaganesh
  * @version 1.0
  */
 public final class Card {

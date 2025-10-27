@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Represents the discard pile in an Uno game.
  * Stores cards that players have played.
- * @author Danilo
+ * @author Danilo Bukvic
  * @version 1.0
  */
 public class DiscardPile {

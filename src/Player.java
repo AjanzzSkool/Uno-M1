@@ -3,7 +3,7 @@ import java.util.*;
  * Represents a player in the Uno game.
  * Each player has a name and a hand of cards.
  * 
- * @author Aws
+ * @author Aws Ali
  * @version 1.0
  */
 public class Player {

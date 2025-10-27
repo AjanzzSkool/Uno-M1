@@ -6,7 +6,7 @@ import java.util.*;
  * Test class for Deck.
  *
  * @author Ajan Balaganesh
- * @version 1
+ * @version 1.0
  */
 
 public class DeckTest {

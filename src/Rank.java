@@ -1,6 +1,6 @@
 /**
  * Represents the ranks of Uno cards.
- * @author Ajan
+ * @author Ajan Balaganesh
  * @version 1.0
  */
 public enum Rank {

@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Represents the Uno deck containing all cards.
  * Handles building, shuffling, drawing, and refilling the deck.
- * @author Ajan
+ * @author Ajan Balaganesh
  * @version 1.0
  */
 public class Deck {

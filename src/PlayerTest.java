@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 /**
  * Test class for Player functionality
- * @author aws
+ * @author Aws Ali
  * @version 1.0
  */
 public class PlayerTest {

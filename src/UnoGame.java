@@ -3,8 +3,8 @@ import java.util.*;
 /**
  * Controls the flow of an Uno game.
  * Handles setup, turns, and scoring.
- * @version 1.0 
- * @author Danilo
+ * @author Danilo Bukvic
+ * @version 1.0
  */
 public class UnoGame {
     private final ConsoleView view = new ConsoleView();

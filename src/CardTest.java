@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
  * Test class for the  card class.
  *
  * @author Ajan Balaganesh
- * @version 1
+ * @version 1.0
  */
 public class CardTest {
 
