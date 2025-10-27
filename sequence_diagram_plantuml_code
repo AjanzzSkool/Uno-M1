@@ -1,0 +1,70 @@
+@startuml
+title Uno Game Turn Sequence (Successful Play)
+
+actor Player as P
+participant Main as M
+participant UnoGame as UG
+participant ConsoleView as CV
+participant RulesEngine as RE
+participant Deck as D
+participant DiscardPile as DP
+
+M -> UG : run()
+activate UG
+
+note over UG : Game Setup and Loop Initialization
+
+loop while game not over (in UG.loop)
+    alt Player Turn (in UG.takeTurn)
+        UG -> CV : showGameStatus()
+        UG -> CV : promptTurn(currentPlayer)
+        activate CV
+        P -> CV : 3 (play 3rd card)
+        CV --> UG : input (card index)
+        deactivate CV
+
+        alt Player Chooses to Play
+            UG -> P : getCard(3)
+            UG -> DP : topCard = top()
+            UG -> RE : canPlay(card, topCard, activeColor)
+            activate RE
+            RE --> UG : true (Valid play)
+            deactivate RE
+
+            UG -> DP : push(card)
+            UG -> UG : applyCardEffect(card)
+
+            alt Card is Wild
+                UG -> CV : promptWildColor()
+                activate CV
+                P -> CV : G (Green)
+                CV --> UG : Color.GREEN
+                deactivate CV
+                UG -> UG : activeColor = Color.GREEN
+            end
+
+            UG -> P : hasWon()
+            UG -> UG : checkGameOver(false)
+
+            UG -> UG : advanceTurn()
+            UG -> CV : showNext(nextPlayerName, cardCount)
+
+        else Player Chooses to Draw (Simplified)
+            UG -> P : drawFrom(deck, 1)
+            activate P
+            P -> D : draw()
+            D --> P : newCard
+            P --> UG :
+            deactivate P
+            UG -> UG : advanceTurn()
+        end
+    end
+end
+
+note over UG : Round/Game Ends
+
+UG -> UG : endRound(winner)
+UG -> CV : showScoreboard()
+
+deactivate UG
+@enduml

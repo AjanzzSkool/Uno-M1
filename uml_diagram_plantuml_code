@@ -1,0 +1,110 @@
+@startuml
+title Uno Game Class Diagram
+
+skinparam classAttributeIconSize 0
+
+class UnoGame {
+  - ConsoleView view
+  - RulesEngine rules
+  - Scoreboard scores
+  - List<Player> players
+  - Deck deck
+  - DiscardPile discard
+  - int current
+  - int direction
+  - Color activeColor
+  + void run()
+  - void setup()
+  - void loop()
+  - Player takeTurn(Player p)
+  - void endRound(Player winner)
+}
+
+class Player {
+  - String name
+  - List<Card> hand
+  + String getName()
+  + void drawFrom(Deck deck, int n)
+  + Card playCard(int index)
+  + boolean hasWon()
+}
+
+class Deck {
+  - ArrayDeque<Card> cards
+  + Card draw()
+  + void addAllToBottom(List<Card> cards)
+  + void buildStandardUno()
+  + boolean isEmpty()
+}
+
+class DiscardPile {
+  - ArrayDeque<Card> pile
+  + void push(Card c)
+  + Card top()
+  + List<Card> takeAllButTop()
+}
+
+class Card {
+  - Color color
+  - Rank rank
+  + Color getColor()
+  + Rank getRank()
+}
+
+class RulesEngine {
+  + boolean canPlay(Card candidate, Card top, Color currentColor)
+  + int scoreOf(Card c)
+  + int handScore(List<Card> hand)
+}
+
+class Scoreboard {
+  - Map<String, Integer> scores
+  + void ensurePlayer(String name)
+  + void add(String name, int delta)
+}
+
+class ConsoleView {
+  + int askPlayerCount()
+  + String askPlayerName(int idx)
+  + String promptTurn(Player p)
+  + Color promptWildColor()
+  + void showHand(Player p)
+  + void showTop(Card top, Color currentColor)
+  + void announce(String msg)
+}
+
+enum Color {
+  RED, GREEN, BLUE, YELLOW, WILD
+}
+
+enum Rank {
+  ZERO, ONE, ..., NINE, SKIP, REVERSE, DRAW_TWO, WILD, WILD_DRAW_TWO
+}
+
+' Relationships '
+
+UnoGame "1" o-- "1" ConsoleView : > view
+UnoGame "1" o-- "1" RulesEngine : > rules
+UnoGame "1" o-- "1" Scoreboard : > scores
+UnoGame "1" o-- "1" Deck : > deck
+UnoGame "1" o-- "1" DiscardPile : > discard
+UnoGame "1" *-- "2..4" Player : > players
+
+Player "1" *-- "*" Card : > hand
+
+Deck "1" *-- "*" Card : > cards
+DiscardPile "1" *-- "*" Card : > pile
+
+Card "1" *-- "1" Color : > color
+Card "1" *-- "1" Rank : > rank
+
+RulesEngine .> Card
+RulesEngine .> Color
+RulesEngine .> Rank
+
+DiscardPile ..> Deck : <<uses>> (for reshuffle)
+Player ..> Deck : <<uses>> (drawFrom)
+ConsoleView .> Player
+ConsoleView .> Card
+ConsoleView .> Color
+@enduml
