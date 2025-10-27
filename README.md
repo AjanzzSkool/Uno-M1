@@ -31,7 +31,7 @@ Uno Game created for the class project for the Carleton University SYSC3110 Fall
 
 ## Deliverables
 
-### Milestone 1
+### Milestone 1 (Version 1.0)
 - readme file
 - code (source + executable in a jar file)
 - UML Diagram
@@ -50,9 +50,18 @@ Uno Game created for the class project for the Carleton University SYSC3110 Fall
 #### Fixed
 - N/A
 
-### Milestone 1
+### Milestone 1 (Version 1.0)
 
 #### Added
-- 
+- Core implementation of UNO Game allowing players to:
+    - View their drawn cards
+    - Place cards using the official notation as detail in the wikipedia link: https://en.wikipedia.org/wiki/Uno_Flip
+    - Draw one card
+    - Execute actions associated with special cards, including Reverse, Skip, Wild, and Wild Draw Two cards
+    - Observe the resultant state of the cards, presented in text format
+- UML Diagram of UNO Game
+- Sequence Diagram of UNO Game
+- Unit Test for various classes (Card, ConsoleView, Deck, Player, RulesEngine, ScoreBoard)
 
-
+## How To Run
+1. In 'UnoGame.java' execute 'run' function, this will start a playable UNO Game and run it from start to end
