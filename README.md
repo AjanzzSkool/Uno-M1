@@ -29,7 +29,12 @@
 
 Uno Game created for the class project for the Carleton University SYSC3110 Fall 2025.
 
-## Deliverables
+## Deliverables and Roadmap
+
+### TODO: Milestone 2 (Version 1.0)
+- GUI Implementation
+- Unit test for model components, currently missing areas of game logic
+- Changes to documentation
 
 ### Milestone 1 (Version 1.0)
 - readme file
