@@ -56,6 +56,7 @@ public class CardTest {
         assertEquals("WildDrawTwo cards should have wild as color", Color.WILD, wildDrawTwo.getColor());
     }
 
+
     /**
      * Method to make sure that the cards have the proper string expression.
      */
@@ -64,6 +65,7 @@ public class CardTest {
         String str = redSeven.toString();
         assertEquals("R:7", str);
     }
+
 
     /**
      * Method to make sure that the wild cards had the right string expression.
@@ -84,4 +86,3 @@ public class CardTest {
                 redSeven.toString(), blueSkip.toString());
     }
 }
-
