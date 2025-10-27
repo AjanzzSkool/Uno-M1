@@ -2,6 +2,8 @@ import java.util.*;
 
 /**
  * Keeps track of player scores in the Uno game.
+ * @author Aws
+ * @version 1.0
  */
 public class Scoreboard {
     private final Map<String, Integer> scores = new LinkedHashMap<>();
