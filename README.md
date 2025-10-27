@@ -1,4 +1,4 @@
-# Uno Game For SYSC 3110 Project## Team
+# Uno Game For SYSC 3110 Project
 
 ### Team
 
