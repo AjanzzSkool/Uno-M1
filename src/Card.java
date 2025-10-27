@@ -2,6 +2,8 @@ import java.util.*;
 
 /**
  * Represents a single Uno card with a color and rank.
+ * @author Ajan
+ * @version 1.0
  */
 public final class Card {
     private final Color color;
