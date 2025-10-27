@@ -3,6 +3,8 @@ import java.util.*;
 /**
  * Represents the Uno deck containing all cards.
  * Handles building, shuffling, drawing, and refilling the deck.
+ * @author Ajan
+ * @version 1.0
  */
 public class Deck {
     private final ArrayDeque<Card> cards = new ArrayDeque<>();

@@ -4,6 +4,8 @@ import java.util.*;
  * Handles all console input and output for the Uno game.
  * This class is responsible for showing game information
  * and getting input from players.
+ * @author Aws
+ * @version 1.0
  */
 public class ConsoleView {
     private final Scanner scanner = new Scanner(System.in);
