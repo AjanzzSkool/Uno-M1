@@ -69,4 +69,4 @@ Uno Game created for the class project for the Carleton University SYSC3110 Fall
 - Unit Test for various classes (Card, ConsoleView, Deck, Player, RulesEngine, ScoreBoard)
 
 ## How To Run
-1. In 'UnoGame.java' execute 'run' function, this will start a playable UNO Game and run it from start to end
+1. Run 'main.java' or In 'UnoGame.java' execute 'run' function, these will both will start a playable UNO Game and run it from start to end
