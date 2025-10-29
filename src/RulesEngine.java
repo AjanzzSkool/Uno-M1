@@ -2,7 +2,7 @@ import java.util.List;
 
 /**
  * Handles the rules and scoring logic for the Uno game.
- * @author Aws
+ * @author Aws Ali
  * @version 1.0
  */
 public class RulesEngine {
